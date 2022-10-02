@@ -3,6 +3,7 @@ import axios from "axios";
 import Database from '@ioc:Adonis/Lucid/Database'
 import AveragePriceHistoric from 'App/Models/AveragePriceHistoric';
 
+
 export default class SymbolsController {
 
     public async index({ request, response } : HttpContextContract){
@@ -26,12 +27,18 @@ export default class SymbolsController {
     public async averagePrice({ request, response} : HttpContextContract){
         const { symbol, symbols } = request.only(['symbol', 'symbols']);
 
-        var params = [];
-        if(typeof symbol !== "undefined") params.push(symbol);
+        var params: boolean[] = Array();
+        if(typeof symbol !== "undefined") params = [symbol];
         if(typeof symbols !== "undefined") params = symbols;
    
+        type priceModel = { 
+            symbol: string,
+            average_price: string,
+            mins: number
+        }; 
+
         try {
-            var prices = [];
+            var prices = new Array<priceModel>();
 
             await params.reduce(async (promise, element) => {
                 await promise;
@@ -39,8 +46,9 @@ export default class SymbolsController {
                await axios.get('https://api.binance.com/api/v3/avgPrice', { params: { symbol : element} })
                 .then(function (res) {
                     // handle success
+                    const id_symbol = element.toString();
                     prices.push({
-                        symbol: element,
+                        symbol: id_symbol,
                         average_price: res.data.price,
                         mins: res.data.mins
                     });
