@@ -17,7 +17,7 @@ Endpoint de conexão com a plataforma da Binance para busca e inclusão de valor
 | `symbol` | `string` | **Obrigatório**. Símbolo para verificação |
 | `symbols` | `array` | **Obrigatório**. Símbolos para verificação |
 
-*Utilizar um dos dois símbolos para verificação na API*
+*Utilizar um dos dois parâmetros para verificação na API*
 
 #### Analisa preço médio e inclui informação no banco de dados
 
@@ -30,7 +30,7 @@ Endpoint de conexão com a plataforma da Binance para busca e inclusão de valor
 | `symbol` | `string` | **Obrigatório**. Símbolo para verificação e inclusão de informações |
 | `symbols` | `array` | **Obrigatório**. Símbolos para verificação e inclusão de informações |
 
-*Utilizar um dos dois símbolos para verificação e inclusão na API*
+*Utilizar um dos dois parâmetros para verificação e inclusão na API*
 
 #### Retornar todos os dados inseridos no banco
 
