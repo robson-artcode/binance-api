@@ -4,6 +4,13 @@
 Endpoint de conexão com a plataforma da Binance para busca e inclusão de valor médio em uma tabela de banco Postgres.
 
 
+
+
+## Link de acesso direto à API
+
+- [https://binance-app-robson.herokuapp.com](https://binance-app-robson.herokuapp.com)
+
+
 ## Documentação da API
 
 #### Retorna informações completas sobre os símbolos enviados 
@@ -39,8 +46,10 @@ Endpoint de conexão com a plataforma da Binance para busca e inclusão de valor
 ```
 
 
+
 ## Stack utilizada
 
 **Back-end:** TypeScript/Node/Adonis
 
 **Banco de dados:** Postgres
+
