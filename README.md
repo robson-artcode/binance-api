@@ -51,5 +51,5 @@ Endpoint de conexão com a plataforma da Binance para busca e inclusão de valor
 
 **Back-end:** TypeScript/Node/Adonis
 
-**Banco de dados:** Postgres
+**Banco de dados:** PostgreSQL
 
