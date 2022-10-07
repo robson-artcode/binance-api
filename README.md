@@ -1,7 +1,7 @@
 
 # Binance API
 
-Endpoint de conexão com a plataforma da Binance para busca e inclusão de valor médio em uma tabela de banco Postgres.
+Endpoint de conexão com a plataforma da Binance para busca e inclusão de valor médio em uma tabela de banco PostgreSQL.
 
 
 
